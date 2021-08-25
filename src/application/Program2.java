@@ -22,10 +22,19 @@ public class Program2 {
 			System.out.println(obj);
 		}
 		
+		/*
 		System.out.println("\n===== Teste3: department insert =====");
 		Department dep = new Department(null, "Música");
 		departmentDao.insert(dep);
 		System.out.println("Inserted! Id = " + dep.getId());
+		*/
+		
+		System.out.println("\n===== Teste4: department update =====");
+		department = departmentDao.findById(6);
+		department.setName("D3");
+		departmentDao.update(department);
+		System.out.println("Updated!");
+		
 	}
 
 }
